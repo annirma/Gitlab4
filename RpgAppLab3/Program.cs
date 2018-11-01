@@ -20,16 +20,21 @@ namespace RpgAppLab3
                 Console.WriteLine($"Roll D8 dice. Result: {roll}");
             }
 
-            
-
             if (command == "diced10")
             {
                 Console.WriteLine("d10");
             }
+
+            if (command == "diced100")
+            {
+                var roll = rnd.Next(100) + 1;
+                Console.WriteLine($"Roll D100 dice. Result: {roll}");
+            }
+
             if (command == "names")
             {
                 var allNames = new[] { "Briana", "Ben", "David",
-            "Dana", "Felicia", "Felix" };
+            "Dana", "Felicia", "Felix", "Max", "Annelie" };
                 var randomIndex = rnd.Next(allNames.Length);
                 Console.WriteLine(allNames[randomIndex]);
             }
