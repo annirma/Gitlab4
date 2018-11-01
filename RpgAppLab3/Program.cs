@@ -29,7 +29,7 @@ namespace RpgAppLab3
             if (command == "names")
             {
                 var allNames = new[] { "Briana", "Ben", "David",
-            "Dana", "Felicia", "Felix" };
+            "Dana", "Felicia", "Felix", "Max", "Annelie" };
                 var randomIndex = rnd.Next(allNames.Length);
                 Console.WriteLine(allNames[randomIndex]);
             }
