@@ -39,7 +39,10 @@ namespace RpgAppLab3
             {
                 Console.WriteLine($"Your random name is: {names[rnd.Next(names.Count)]}");
             }
-
+            else if(command == "!roll D100")
+            {
+                Console.WriteLine($"Your rolled a {rnd.Next(1, 100 + 1)}");
+            }
             Console.ReadKey();
 
             var equipment = new List<string>()
