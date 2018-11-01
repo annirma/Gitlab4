@@ -23,6 +23,10 @@ namespace RpgAppLab3
             {
                 Console.WriteLine($"You rolled a {rnd.Next(1, 4 + 1)}");
             }
+            else if(command == "!roll D100")
+            {
+                Console.WriteLine($"Your rolled a {rnd.Next(1, 100 + 1)}");
+            }
             Console.ReadKey();
         }
     }
