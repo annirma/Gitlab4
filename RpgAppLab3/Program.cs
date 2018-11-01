@@ -7,16 +7,13 @@ namespace RpgAppLab3
         static void Main(string[] args)
         {
             var rnd = new Random();
-            Console.WriteLine("What do you need?");
+            Console.WriteLine("Roll the dice!");
             var command = Console.ReadLine();
-            if (command == "names")
+            if (command == "roll D8")
             {
-                var allNames = new[] { "Briana", "Ben", "David",
-            "Dana", "Felicia", "Felix" };
-                var randomIndex = rnd.Next(allNames.Length);
-                Console.WriteLine(allNames[randomIndex]);
+                var randomIndex = rnd.Next(1, 8 + 1);
+                Console.WriteLine(randomIndex);
             }
-            Console.ReadKey();
         }
     }
 }
