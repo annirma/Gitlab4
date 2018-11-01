@@ -19,8 +19,9 @@ namespace RpgAppLab3
                 "Zangief",
             };
 
-            Console.WriteLine("Roll the dice!");
+            Console.WriteLine("Enter a command:");
             var command = Console.ReadLine();
+
             if (command == "roll d10")
             {
                 int diceRoll = rnd.Next(1, 10 + 1);
@@ -40,6 +41,19 @@ namespace RpgAppLab3
             }
 
             Console.ReadKey();
+
+            var equipment = new List<string>()
+            {
+                "plate",
+                "fork",
+                "spoon",
+            };
+
+            if (command == "equipment")
+            {
+                int rndIndx = rnd.Next(0, equipment.Count);
+                Console.WriteLine($"Congratz, you just found a {equipment[rndIndx]}");
+            }
         }
     }
 }
