@@ -33,6 +33,13 @@ namespace RpgAppLab3
                 var randomIndex = rnd.Next(allNames.Length);
                 Console.WriteLine(allNames[randomIndex]);
             }
+
+            if (command == "equipment")
+            {
+                var equipment = new[] { "Helmet", "Sword", "Shield" };
+                var randomIndex = rnd.Next(equipment.Length);
+                Console.WriteLine(equipment[randomIndex]);
+            }
             Console.ReadKey();
         }
     }
