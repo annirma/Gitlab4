@@ -9,6 +9,13 @@ namespace RpgAppLab3
             var rnd = new Random();
             Console.WriteLine("What do you need?");
             var command = Console.ReadLine();
+
+            if (command == "dice")
+            {
+                var roll = rnd.Next(8) +1;
+                Console.WriteLine($"Roll D8 dice. Result: {roll}");
+            }
+
             if (command == "names")
             {
                 var allNames = new[] { "Briana", "Ben", "David",
