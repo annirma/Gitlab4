@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace RpgAppLab3
 {
@@ -7,6 +8,17 @@ namespace RpgAppLab3
         static void Main(string[] args)
         {
             var rnd = new Random();
+
+            var names = new List<string>()
+            {
+                "Alexa",
+                "Ciri",
+                "Phantasma",
+                "Keeloo",
+                "Ryu",
+                "Zangief",
+            };
+
             Console.WriteLine("Roll the dice!");
             var command = Console.ReadLine();
             if (command == "roll d10")
@@ -22,7 +34,11 @@ namespace RpgAppLab3
             else if(command == "!roll D4")
             {
                 Console.WriteLine($"You rolled a {rnd.Next(1, 4 + 1)}");
+            } else if (command == "names")
+            {
+                Console.WriteLine($"Your random name is: {names[rnd.Next(names.Count)]}");
             }
+
             Console.ReadKey();
         }
     }
