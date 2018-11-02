@@ -44,7 +44,7 @@ namespace RpgAppLab3
 
             if (command == "equipment")
             {
-                var equipment = new[] { "Helmet", "Sword", "Shield" };
+                var equipment = new[] { "Helmet", "Sword", "Shield", "Staff", "Hat", "Shirt", "Axe" };
                 var randomIndex = rnd.Next(equipment.Length);
                 Console.WriteLine(equipment[randomIndex]);
             }
