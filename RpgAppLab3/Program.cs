@@ -61,19 +61,6 @@ namespace RpgAppLab3
                 Console.WriteLine(equipment[randomIndex]);
             }
             Console.ReadKey();
-
-            var equipment = new List<string>()
-            {
-                "plate",
-                "fork",
-                "spoon",
-            };
-
-            if (command == "equipment")
-            {
-                int rndIndx = rnd.Next(0, equipment.Count);
-                Console.WriteLine($"Congratz, you just found a {equipment[rndIndx]}");
-            }
         }
     }
 }
