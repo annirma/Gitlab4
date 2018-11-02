@@ -10,25 +10,28 @@ namespace RpgAppLab3
             Console.WriteLine("What do you need?");
             var command = Console.ReadLine();
 
-            if (command == "diced4")
-
-                Console.WriteLine("D4 was rolled");
-
-            if (command == "diced8")
+            if (command == "dice roll")
             {
-                var roll = rnd.Next(8) +1;
-                Console.WriteLine($"Roll D8 dice. Result: {roll}");
-            }
+                var roll = rnd.Next(20) + 1;
+                if (roll <= 4)
+                {
+                    Console.WriteLine("D4 was rolled");
+                }
 
-            if (command == "diced10")
-            {
-                Console.WriteLine("d10");
-            }
+                else if (roll <= 8)
+                {
+                    Console.WriteLine($"Roll D8 dice. Result: {roll}");
+                }
 
-            if (command == "diced100")
-            {
-                var roll = rnd.Next(100) + 1;
-                Console.WriteLine($"Roll D100 dice. Result: {roll}");
+                else if (roll <= 10)
+                {
+                    Console.WriteLine("d10");
+                }
+
+                else 
+                {
+                    Console.WriteLine("D20");
+                }
             }
 
             if (command == "names")
