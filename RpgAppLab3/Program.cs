@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace RpgAppLab3
 {
@@ -7,39 +8,40 @@ namespace RpgAppLab3
         static void Main(string[] args)
         {
             var rnd = new Random();
-            Console.WriteLine("What do you need?");
+
+            var names = new List<string>()
+            {
+                "Alexa",
+                "Ciri",
+                "Phantasma",
+                "Keeloo",
+                "Ryu",
+                "Zangief",
+            };
+
+            Console.WriteLine("Enter a command:");
             var command = Console.ReadLine();
 
-            if (command == "dice roll")
+            if (command == "roll d10")
             {
-                var roll = rnd.Next(20) + 1;
-                if (roll <= 4)
-                {
-                    Console.WriteLine("D4 was rolled");
-                }
-
-                else if (roll <= 8)
-                {
-                    Console.WriteLine($"Roll D8 dice. Result: {roll}");
-                }
-
-                else if (roll <= 10)
-                {
-                    Console.WriteLine("d10");
-                }
-
-                else 
-                {
-                    Console.WriteLine("D20");
-                }
+                int diceRoll = rnd.Next(1, 10 + 1);
+                Console.WriteLine($"Rolled a D10: {diceRoll}");
             }
-
-            if (command == "names")
+            else if (command == "roll d8")
             {
-                var allNames = new[] { "Briana", "Ben", "David",
-            "Dana", "Felicia", "Felix", "Max", "Annelie" };
-                var randomIndex = rnd.Next(allNames.Length);
-                Console.WriteLine(allNames[randomIndex]);
+                var randomIndex = rnd.Next(1, 8 + 1);
+                Console.WriteLine(randomIndex);
+            }
+            else if(command == "roll d4")
+            {
+                Console.WriteLine($"You rolled a {rnd.Next(1, 4 + 1)}");
+            } else if (command == "names")
+            {
+                Console.WriteLine($"Your random name is: {names[rnd.Next(names.Count)]}");
+            }
+            else if(command == "roll d100")
+            {
+                Console.WriteLine($"Your rolled a {rnd.Next(1, 100 + 1)}");
             }
 
             if (command == "equipment")
